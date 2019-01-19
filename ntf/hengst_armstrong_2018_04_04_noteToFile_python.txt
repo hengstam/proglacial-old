@@ -1,0 +1,95 @@
+Installed OpenCV with conda: conda install --channel https://conda.anaconda.org/menpo opencv3
+
+
+~~~~
+
+ACCA: https://landsat.usgs.gov/sites/default/files/documents/L8_ACCA.pdf
+
+Otsu Py: https://docs.opencv.org/3.3.0/d7/d4d/tutorial_py_thresholding.html
+
+!!!: https://www.sciencedirect.com/science/article/pii/S1658365516300206
+Comparison of NDWI, MNDWI, AWEI: https://ieeexplore.ieee.org/document/7974754/
+
+MOWI: https://www.int-arch-photogramm-remote-sens-spatial-inf-sci.net/XLII-4-W4/185/2017/isprs-archives-XLII-4-W4-185-2017.pdf
+
+EWI: https://ieeexplore.ieee.org/xpls/icp.jsp?arnumber=7027774
+
+
+~~~~
+
+WHAT: trying to seperate rock from water
+
+ndwi doesn't work.
+looked at https://landsat.usgs.gov/spectral-characteristics-viewer for help
+bands 2 & 7 don't work
+
+
+
+Stuff to generate localized filter histograms of:
+* Clear water
+* Turbid water
+* Unvegetated rocky stuff
+* Snow & ice
+* Vegetated flat area
+
+One-to-one function mapping pixel coords to geographic coords for a given file
+
+
+~~~~
+
+Do a literature review (of what???)
+
+June 8th-28th
+August 8th-15th
+
+Get an abstract drafted by June 8th
+
+k means
+
+shapefile
+
+~~~~
+
+Used photoshop to make an RBG 654 of the training landscape. 
+Manually adjusted and selected bodies of water using magic selection tool. Went back across the coastline and tweaked it just to be on the safe side.
+
+~~~~
+
+15 June 18:
+K-means, doesn't need percise pixel definitions. Just loose representation of the range of values in the whole set. Clustering-based.
+
+~~~~
+
+Using ArcMap... doesn't seem to support more than 3 channels being looked at
+Trying to implement it in python, found some libraries
+This is too frustrating, I'm going to Matlab
+I'll have to recreate everything in matlab. Back to python
+I'm just going to write my own algorithm
+This is very slow even for extremely small samples
+Something's going wrong since I added in new thingsy
+
+~~~
+
+Need 32 bit python for arcmap. https://stackoverflow.com/questions/33709391/using-multiple-python-engines-32bit-64bit-and-2-7-3-5
+
+set CONDA_FORCE_32BIT=1
+activate py27_32
+
+python in the conda IDLE shell, then use execfile() to run scripts.
+
+How to install openCV: conda install -c menpo opencv
+
+~~~
+
+Hughes Phenomenon: is more dimensionality actually better?
+Maximum Likelyhood vs Minimum Distance--elogenated 
+
+~~~
+
+Seed image: a core of good images to start throwing garbage at once we're confident there's no false negs.
+
+1) Focus on a small area (067, 017)
+2) Choose your cloud, snow, illumination carefully
+3) Increase time span (LS 5)
+
+Google earth engine

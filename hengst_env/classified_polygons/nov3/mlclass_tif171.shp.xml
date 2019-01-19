@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en"><Esri><CreaDate>20181103</CreaDate><CreaTime>23475600</CreaTime><ArcGISFormat>1.0</ArcGISFormat><SyncOnce>TRUE</SyncOnce><DataProperties><lineage><Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Conversion Tools.tbx\RasterToPolygon" Date="20181103" Time="234756">RasterToPolygon C:\Users\hengstam\Desktop\Research\hengst_env\setnu_ras classified_polygons\MLClass_tif171.shp SIMPLIFY VALUE</Process></lineage></DataProperties></Esri></metadata>
